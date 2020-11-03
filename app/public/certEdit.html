@@ -61,6 +61,7 @@
       <table class="table table-bordered table-striped table-hover table-condensed container-fluid">
         <thead class="thead-dark">
           <tr>
+            <th scope="col">Certification ID</th>
             <th scope="col">Certification Name</th>
             <th scope="col">Certifying Agency</th>
             <th scope="col">Expiration Period</th>
@@ -68,6 +69,7 @@
         </thead>
         <tbody class="text-center">
           <tr v-for="c in certList">
+            <td>{{c.certificationID}}</td>
             <td>{{c.certificationName}}</td>
             <td>{{c.certifyingAgency}}</td>
             <td>{{c.defaultExpirationPeriod}}</td>
@@ -81,7 +83,7 @@
           <div class="form-group">
             <div class="form-row">
           <label for="cName"> Certification ID </label>
-          <input type="text" class="form-control" v-model="certification.certificationID" placeholder="Must know certification ID!" required>
+          <input type="text" class="form-control" v-model="certification.certificationID" placeholder="Certification ID" required>
         </div>
         <div class="form-row">
           <label for="cName"> Certification Name </label>
