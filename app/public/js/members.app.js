@@ -39,7 +39,7 @@ var membersapp = new Vue({
 
         methods:{
           fetchMember() {
-            fetch('api/firefighters/')
+            fetch('api/firefighters/index.php')
             .then(response => response.json())
             .then(json => {
               this.members=json;
